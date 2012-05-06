@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ERDBArch.Mock</name>
+    </assembly>
+    <members>
+        <member name="T:ERDBArch.Mock.PhoneBook.Person">
+            <summary>
+            Person mock class
+            </summary>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.Validate(ERDBArch.Mock.PhoneBook.Person)">
+            <summary>
+            Validation function for Person
+            </summary>
+            <param name="p">Person object</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.Validate(System.Object)">
+            <summary>
+            Validation function for Person
+            </summary>
+            <param name="p">Person object</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.Read(System.IO.Stream)">
+            <summary>
+            Reads this Person object from binary stream
+            </summary>
+            <param name="inStream">Input stream</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.Write(System.IO.Stream)">
+            <summary>
+            Writes this Person object to binary stream
+            </summary>
+            <param name="outStream">Output stream</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.CompareTo(System.Object)">
+            <summary>
+            Compares objects
+            </summary>
+            <param name="obj">Object compare with</param>
+            <returns>-1:this is less;1 this is greater;0-equals</returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.Clone">
+            <summary>
+            Clone this object
+            </summary>
+            <returns>Copy of this</returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Person.AssignTo(System.Object)">
+            <summary>
+            Fills object with this object values
+            </summary>
+            <param name="o">Object to fill</param>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Person.Null">
+            <summary>
+            Returns nullable Person object
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Person.isNull">
+            <summary>
+            Gets nullable Person object
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Person.ID">
+            <summary>
+            Gets or sets Person ID
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Person.FName">
+            <summary>
+            Gets or sets first name
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Person.LName">
+            <summary>
+            Gets or sets Last name
+            </summary>
+        </member>
+        <member name="T:ERDBArch.Mock.PhoneBook.Phone">
+            <summary>
+            Phone mock class
+            </summary>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.Validate(ERDBArch.Mock.PhoneBook.Phone)">
+            <summary>
+            Validation function for phone
+            </summary>
+            <param name="p">Phone object</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.Validate(System.Object)">
+            <summary>
+            Validation function for phone
+            </summary>
+            <param name="p">Phone object</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.Read(System.IO.Stream)">
+            <summary>
+            Reads this Phone object from binary stream
+            </summary>
+            <param name="inStream">Input stream</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.Write(System.IO.Stream)">
+            <summary>
+            Writes this Phone object to binary stream
+            </summary>
+            <param name="outStream">Output stream</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.CompareTo(System.Object)">
+            <summary>
+            Compares objects
+            </summary>
+            <param name="obj">Object compare with</param>
+            <returns>-1:this is less;1 this is greater;0-equals</returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.Clone">
+            <summary>
+            Clone this object
+            </summary>
+            <returns>Copy of this</returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Phone.AssignTo(System.Object)">
+            <summary>
+            Fills object with this object values
+            </summary>
+            <param name="o">Object to fill</param>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Phone.isNull">
+            <summary>
+            Gets nullable Phone object
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Phone.ID">
+            <summary>
+            Gets or sets Phone ID
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Phone.PersonID">
+            <summary>
+            Gets or sets Person ID
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Phone.PhoneValue">
+            <summary>
+            Gets or sets Phone number
+            </summary>
+        </member>
+        <member name="T:ERDBArch.Mock.PhoneBook.Address">
+            <summary>
+            Address mock class
+            </summary>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.Validate(ERDBArch.Mock.PhoneBook.Address)">
+            <summary>
+            Validation for Address
+            </summary>
+            <param name="p">Address object</param>
+            <returns></returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.Validate(System.Object)">
+            <summary>
+            Validation function for Address
+            </summary>
+            <param name="p">Address object</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.Read(System.IO.Stream)">
+            <summary>
+            Reads this Address object from binary stream
+            </summary>
+            <param name="inStream">Input stream</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.Write(System.IO.Stream)">
+            <summary>
+            Writes this Address object to binary stream
+            </summary>
+            <param name="outStream">Output stream</param>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.CompareTo(System.Object)">
+            <summary>
+            Compares objects
+            </summary>
+            <param name="obj">Object compare with</param>
+            <returns>-1:this is less;1 this is greater;0-equals</returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.Clone">
+            <summary>
+            Clone this object
+            </summary>
+            <returns>Copy of this</returns>
+        </member>
+        <member name="M:ERDBArch.Mock.PhoneBook.Address.AssignTo(System.Object)">
+            <summary>
+            Fills object with this object values
+            </summary>
+            <param name="o">Object to fill</param>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Address.isNull">
+            <summary>
+            Gets nullable Address object
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Address.ID">
+            <summary>
+            Gets or sets Address ID
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Address.PersonID">
+            <summary>
+            Gets or sets Person ID
+            </summary>
+        </member>
+        <member name="P:ERDBArch.Mock.PhoneBook.Address.AddressValue">
+            <summary>
+            Gets or sets Address
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\bin\Debug\ERDBArch.Mock.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\bin\Debug\ERDBArch.Mock.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\obj\Debug\ERDBArch.Mock.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\obj\Debug\ERDBArch.Mock.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\bin\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDBArch.Mock\bin\Debug\ERDB.Infrastructure.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\bin\Debug\ERDBArch.Mock.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\bin\Debug\ERDBArch.Mock.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\bin\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\bin\Debug\ERDB.Infrastructure.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\obj\Debug\ERDBArch.Mock.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Mock\obj\Debug\ERDBArch.Mock.pdb

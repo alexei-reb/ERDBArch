@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERDBArchDatabaseModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="ERDBArch.DatabaseModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="personid" ColumnName="personid" />
+          <ScalarProperty Name="addressvalue" ColumnName="addressvalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="ERDBArch.DatabaseModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phones">
+      <EntityTypeMapping TypeName="ERDBArch.DatabaseModel.Phone">
+        <MappingFragment StoreEntitySet="Phone">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="personid" ColumnName="personid" />
+          <ScalarProperty Name="phonevalue" ColumnName="phonevalue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ERDBArch.DatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ERDBArchDatabaseModelStoreContainer">
+    <EntitySet Name="Address" EntityType="ERDBArch.DatabaseModel.Store.Address" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Person" EntityType="ERDBArch.DatabaseModel.Store.Person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Phone" EntityType="ERDBArch.DatabaseModel.Store.Phone" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Address_Person" Association="ERDBArch.DatabaseModel.Store.FK_Address_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Phone_Person" Association="ERDBArch.DatabaseModel.Store.FK_Phone_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Phone" EntitySet="Phone" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="personid" Type="int" />
+    <Property Name="addressvalue" Type="nchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="lname" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="fname" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Phone">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="personid" Type="int" />
+    <Property Name="phonevalue" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Address_Person">
+    <End Role="Person" Type="ERDBArch.DatabaseModel.Store.Person" Multiplicity="0..1" />
+    <End Role="Address" Type="ERDBArch.DatabaseModel.Store.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="personid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Phone_Person">
+    <End Role="Person" Type="ERDBArch.DatabaseModel.Store.Person" Multiplicity="0..1" />
+    <End Role="Phone" Type="ERDBArch.DatabaseModel.Store.Phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Phone">
+        <PropertyRef Name="personid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

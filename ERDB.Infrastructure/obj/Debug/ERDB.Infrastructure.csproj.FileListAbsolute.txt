@@ -1,0 +1,10 @@
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDB.Infrastructure\bin\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDB.Infrastructure\bin\Debug\ERDB.Infrastructure.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDB.Infrastructure\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDB.Infrastructure\obj\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\TembDBArch\ERDB.Infrastructure\obj\Debug\ERDB.Infrastructure.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDB.Infrastructure\bin\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDB.Infrastructure\bin\Debug\ERDB.Infrastructure.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDB.Infrastructure\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDB.Infrastructure\obj\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDB.Infrastructure\obj\Debug\ERDB.Infrastructure.pdb

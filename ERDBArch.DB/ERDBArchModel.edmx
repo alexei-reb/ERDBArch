@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ERDBArch.DatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ERDBArchDatabaseModelStoreContainer">
+          <EntitySet Name="Address" EntityType="ERDBArch.DatabaseModel.Store.Address" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Person" EntityType="ERDBArch.DatabaseModel.Store.Person" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Phone" EntityType="ERDBArch.DatabaseModel.Store.Phone" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Address_Person" Association="ERDBArch.DatabaseModel.Store.FK_Address_Person">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Phone_Person" Association="ERDBArch.DatabaseModel.Store.FK_Phone_Person">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Phone" EntitySet="Phone" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="personid" Type="int" />
+          <Property Name="addressvalue" Type="nchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="lname" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="fname" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Phone">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="personid" Type="int" />
+          <Property Name="phonevalue" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Address_Person">
+          <End Role="Person" Type="ERDBArch.DatabaseModel.Store.Person" Multiplicity="0..1" />
+          <End Role="Address" Type="ERDBArch.DatabaseModel.Store.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="personid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Phone_Person">
+          <End Role="Person" Type="ERDBArch.DatabaseModel.Store.Person" Multiplicity="0..1" />
+          <End Role="Phone" Type="ERDBArch.DatabaseModel.Store.Phone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Phone">
+              <PropertyRef Name="personid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERDBArch.DatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="ERDBArch.DatabaseModel.Address" />
+          <EntitySet Name="People" EntityType="ERDBArch.DatabaseModel.Person" />
+          <EntitySet Name="Phones" EntityType="ERDBArch.DatabaseModel.Phone" />
+          <AssociationSet Name="FK_Address_Person" Association="ERDBArch.DatabaseModel.FK_Address_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Phone_Person" Association="ERDBArch.DatabaseModel.FK_Phone_Person">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Phone" EntitySet="Phones" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personid" Type="Int32" />
+          <Property Name="addressvalue" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="Person" Relationship="ERDBArch.DatabaseModel.FK_Address_Person" FromRole="Address" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lname" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="fname" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Addresses" Relationship="ERDBArch.DatabaseModel.FK_Address_Person" FromRole="Person" ToRole="Address" />
+          <NavigationProperty Name="Phones" Relationship="ERDBArch.DatabaseModel.FK_Phone_Person" FromRole="Person" ToRole="Phone" />
+        </EntityType>
+        <EntityType Name="Phone">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personid" Type="Int32" />
+          <Property Name="phonevalue" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Person" Relationship="ERDBArch.DatabaseModel.FK_Phone_Person" FromRole="Phone" ToRole="Person" />
+        </EntityType>
+        <Association Name="FK_Address_Person">
+          <End Role="Person" Type="ERDBArch.DatabaseModel.Person" Multiplicity="0..1" />
+          <End Role="Address" Type="ERDBArch.DatabaseModel.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="personid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Phone_Person">
+          <End Role="Person" Type="ERDBArch.DatabaseModel.Person" Multiplicity="0..1" />
+          <End Role="Phone" Type="ERDBArch.DatabaseModel.Phone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Phone">
+              <PropertyRef Name="personid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERDBArchDatabaseModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Addresses"><EntityTypeMapping TypeName="ERDBArch.DatabaseModel.Address"><MappingFragment StoreEntitySet="Address">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="personid" ColumnName="personid" />
+            <ScalarProperty Name="addressvalue" ColumnName="addressvalue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="People"><EntityTypeMapping TypeName="ERDBArch.DatabaseModel.Person"><MappingFragment StoreEntitySet="Person">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="lname" ColumnName="lname" />
+            <ScalarProperty Name="fname" ColumnName="fname" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Phones"><EntityTypeMapping TypeName="ERDBArch.DatabaseModel.Phone"><MappingFragment StoreEntitySet="Phone">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="personid" ColumnName="personid" />
+            <ScalarProperty Name="phonevalue" ColumnName="phonevalue" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ERDBArchModel">
+        <EntityTypeShape EntityType="ERDBArch.DatabaseModel.Address" Width="1.5" PointX="3" PointY="1" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERDBArch.DatabaseModel.Person" Width="1.5" PointX="0.75" PointY="2.25" Height="1.9802864583333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERDBArch.DatabaseModel.Phone" Width="1.5" PointX="3" PointY="3.625" Height="1.787985026041667" IsExpanded="true" />
+        <AssociationConnector Association="ERDBArch.DatabaseModel.FK_Address_Person" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.5189925130208337" />
+          <ConnectorPoint PointX="3" PointY="2.5189925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ERDBArch.DatabaseModel.FK_Phone_Person" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.9276432291666667" />
+          <ConnectorPoint PointX="3" PointY="3.9276432291666667" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

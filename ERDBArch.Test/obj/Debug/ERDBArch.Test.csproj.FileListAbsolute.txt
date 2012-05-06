@@ -1,0 +1,17 @@
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Database.mdf
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Test.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Test.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDB.Infrastructure.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.DB.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Mock.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Modules.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\nunit.framework.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDB.Infrastructure.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.DB.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Mock.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Mock.xml
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Modules.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\obj\Debug\ERDBArch.Test.dll
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\obj\Debug\ERDBArch.Test.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\ERDBArch\ERDBArch.Test\bin\Debug\ERDBArch.Test.dll.config
